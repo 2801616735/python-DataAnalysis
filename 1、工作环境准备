@@ -1,0 +1,80 @@
+1、什么是数据分析
+	数据分析是基于商业目的，有目的的进行收集、整理、加工和分析数据，提炼有价信息的一个过程
+
+1.1、基本步骤
+	明确目的思路 -> 数据收集 -> 数据处理 -> 数据分析 -> 数据可视化
+
+2、基本环境准备
+2.1、操作系统与python版本
+	windows 10 、python-3.6.15
+
+2.2、安装常见库
+	pip install ipython
+	pip install notebook
+	pip install numpy
+	pip install pandas
+	pip install matplotlib
+	pip install scipy
+	pip install scikit-learn
+
+2.3、库说明
+- numpy
+	python科学计算的基础包。
+- scipy
+	数学计算
+- pandas
+	基于numpy的数据分析工具
+- matplotlib
+	绘图工具
+
+3、开发IDE
+	常见pycharm、sublimeText
+	这里使用jupyter notebook (一个web端的开发环境)
+
+3.1、启动jupyter notebook
+	打开cmd,进入开发目录后，执行 jupyter notebook 或者 ipython notebook
+
+3.2、notebook简单操作
+- 新建文件
+- 更换文件名称
+- 执行文件
+	按ctrl+enter
+- 以当前编辑行为基准 往下追加一行按b键
+- 以当前编辑行为基准 往上追加一行按a键
+- 以当前编辑行为基准 按m键则此行为markdown格式
+- 以当前编辑行为基准 按y键则此行为code格式
+- 以当前编辑行为基准 按enter键则可以编辑此行
+- 以当前编辑行为基准 按tab键则可以补齐命令
+
+- 魔术命令
+	%timeit 多次执行一条语句，并返回平均时间
+	%time 返回执行一条语句的时间
+	%%timeit 执行多条语句，并返回平均时间
+	%%time 返回执行多条语句的时间
+	%reset 删除当前空间的全部变量
+	%run *.py 执行外部py文件
+
+4、python高级特性
+4.1、列表推导式
+	l1 = [x for x in range(5) if x%2==0]
+	l2 = [x for x in range(5)]
+4.2、字典推导式
+	d = {'name':'xiaobei'}
+	d1 = {k:v for k,v in d.items()}
+
+4.3、匿名函数lambda
+	f = lambda x:x**2
+	f(2)
+
+4.4、map/reduce
+	def m(x):
+	    return x**2
+	l = map(m,[1,2,3])
+	def r(x,y):
+	    return x+y
+	l2 = reduce(r,l)
+
+4.5、filter
+	def f(x):
+	    return x>0
+	filter(f,[-1,-2,1,2])
